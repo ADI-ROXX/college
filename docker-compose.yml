@@ -3,16 +3,7 @@
 version: '3.8'
 
 services:
-  frontend:
-    build:
-      context: ./college-event-frontend
-      dockerfile: Dockerfile
-    ports:
-      - "3000:3000"
-    depends_on:
-      - backend
-    networks:
-      - app-network
+  
 
   backend:
     build:
