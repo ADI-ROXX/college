@@ -1,0 +1,24 @@
+# college-event-backend/Dockerfile-python
+
+# Use official Python runtime as the base image
+FROM python:3.9-alpine
+
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
+# Set working directory
+WORKDIR /app
+
+# Install dependencies
+COPY requirements.txt ./
+RUN pip install --upgrade pip && pip install -r requirements.txt
+
+# Copy the rest of the Python backend code
+COPY . .
+
+# Expose the Python backend port (e.g., 5000)
+EXPOSE 5081
+
+# Command to run the Python backend
+CMD ["python3", "app.py"]

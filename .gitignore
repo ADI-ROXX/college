@@ -1,0 +1,12 @@
+
+#ignore frontend
+college-event-frontend/
+
+# Ignore everything in the uploads folder
+college-event-backend/uploads/*
+
+# Ignore everything in the node_modules folder
+college-event-backend/node_modules/
+
+# Ignore everything in the venv folder
+college-event-backend/venv/
